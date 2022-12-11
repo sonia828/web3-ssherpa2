@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  h1 {
+    font-size: 1.3rem;
+  font-family:'Times New Roman', Times, serif
+}
+  .bg {
+  
+    background-image: url("bakeryimages/2.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
