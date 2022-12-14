@@ -1,6 +1,5 @@
 <html>
 <head>
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -11,17 +10,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-<h1>Anime List Tracker</h1>
+<body style="background-color:#FFD7E2;">
+<h1><b><center>Anime List Tracker</b><center></h1>
 
 <?php
 
-include "dbconnect.php";
-//include "searchAllAnime.php";
+include "searchAllAnime.php";
 ?>
-
-
-
+<br>
 
 <form class="form-horizontal" action="searchKeyword.php">
 <fieldset>
@@ -60,9 +56,9 @@ include "dbconnect.php";
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="new_Anime">Enter an anime to add to your list</label>  
+  <label class="col-md-4 control-label" for="Anime_answer">Enter an anime to add to your list</label>  
   <div class="col-md-6">
-  <input id="new_Anime" name="new_Anime" type="text" placeholder="e.g. kimi no nawa" class="form-control input-md">
+  <input id="Anime_answer" name="Anime_answer" type="text" placeholder="e.g. kimi no nawa" class="form-control input-md">
     
   </div>
 </div>
@@ -81,11 +77,12 @@ include "dbconnect.php";
 <?php
 //include "searchKeyword.php";
 
-
 $mysqli->close();
 
 
 ?>
+
+<a href="searchAllAnime.php"> Click here to View List </a>
 
 </body>
 </html>

@@ -1,20 +1,26 @@
 <?php
+require_once('db.php');
 
-include "dbconnect.php";
-$newAnime = $_GET["new_Anime"];
+$Anime_answer = $_GET["Anime_answer"];
 
-$newAnime = addslashes($newAnime);
+echo "<h2> Adding a new anime to the list of the ones you have watched: $Anime_answer </h2>";
 
-//search the database for the word name
-//create another query
+$data = [
+    'Anime_answer' => $Anime_answer,
+];
+$sql = "INSERT INTO List_Table (Anime_answer) VALUES (:Anime_answer)";
+$stmt= $pdo->prepare($sql);
 
-echo "<h2> Adding a new anime to the list of the ones you have watched: $newAnime </h2>";
+$id = NULL;
 
-$sql = "INSERT INTO List_Table (AnimeID, Anime_answer) VALUES (NULL, '$newAnime')";
-$result = $mysqli->query($sql) or die(mysqli_error($mysqli));
-
-include "searchAllAnime.php";
-
+try {
+    $pdo->beginTransaction();
+    $stmt->execute( $data );
+    $id = $pdo->lastInsertId();
+    $pdo->commit();
+} catch(PDOExecption $e) {
+    $pdo->rollback();
+     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
 ?>
-
 <a href="index.php"> Return to the main page </a>
