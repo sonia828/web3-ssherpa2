@@ -9,7 +9,7 @@
 
 <?php
 
-$nameErr = $emailErr = $genderErr  = "";
+$nameErr = $emailErr  = "";
 $name = $email = $gender = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
   } else {
     $gender = test_input($_POST["gender"]);
   }
@@ -62,7 +61,6 @@ function test_input($data) {
   <input type="radio" name="gender" value="female">Female
   <input type="radio" name="gender" value="male">Male
   <input type="radio" name="gender" value="other">Prefer Not to say
-  <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
