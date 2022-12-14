@@ -31,9 +31,9 @@ include "dbconnect.php";
 
 <!-- Search input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="ketword">Search Input</label>
+  <label class="col-md-4 control-label" for="keyword">Search Input</label>
   <div class="col-md-5">
-    <input id="ketword" name="ketword" type="search" placeholder="e.g. love" class="form-control input-md" required="">
+    <input id="keyword" name="keyword" type="search" placeholder="e.g. love" class="form-control input-md" required="">
     <p class="help-block">Enter a word to search for in the list of animes</p>
   </div>
 </div>
