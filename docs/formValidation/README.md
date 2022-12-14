@@ -1,1 +1,1 @@
-*** form validation that validates that name only contains whitespace and letters, that email must contain @ and . and to fill out the entire form *
+## Form validation that validates that name only contains whitespace and letters, that email must contain @ and . and must fill certain fields of the form. #
