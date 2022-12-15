@@ -10,7 +10,8 @@ $keywordfromform = $_GET['keyword'];
 $sql = "SELECT * FROM List_Table WHERE Anime_answer LIKE :keywordfromform";
 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue( ':keywordfromform', '%' . $keywordfromform . '%' );
+$keywordfromform = "%" . $keywordfromform . "%";
+$stmt->bindValue( ':keywordfromform', $keywordfromform);
 $stmt->execute();
 
 $count = 0;
