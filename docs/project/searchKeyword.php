@@ -5,7 +5,7 @@ require_once('db.php');
 $keywordfromform = $_GET['keyword'];
 
 //$sql = "SELECT AnimeID, Anime_answer FROM List_Table WHERE Anime_answer LIKE '%". $keywordfromform . "%'";
-// method above^ is vulnerable to sql injection attack!! 
+// method above^ is vulnerable to sql injection attack! 
 
 $sql = "SELECT * FROM List_Table WHERE Anime_answer LIKE :keywordfromform";
 
