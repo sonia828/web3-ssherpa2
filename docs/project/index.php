@@ -11,7 +11,7 @@
 </head>
 
 <body style="background-color:#FFD7E2;">
-<h1><b><center>Anime List Tracker</b><center></h1>
+<h1><b><center>Movie List Tracker</b><center></h1>
 
 <?php
 
@@ -30,7 +30,7 @@ include "searchAllAnime.php";
   <label class="col-md-4 control-label" for="keyword">Search Input</label>
   <div class="col-md-5">
     <input id="keyword" name="keyword" type="search" placeholder="e.g. love" class="form-control input-md" required="">
-    <p class="help-block">Enter a word to search for in the list of animes</p>
+    <p class="help-block">Enter a word to search for in the list of movies</p>
   </div>
 </div>
 
@@ -52,11 +52,11 @@ include "searchAllAnime.php";
 <fieldset>
 
 <!-- Form Name -->
-<legend>Add an Anime</legend>
+<legend>Add a Movie</legend>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Anime_answer">Enter an anime to add to your list</label>  
+  <label class="col-md-4 control-label" for="Anime_answer">Enter a movie to add to your list</label>  
   <div class="col-md-6">
   <input id="Anime_answer" name="Anime_answer" type="text" placeholder="e.g. kimi no nawa" class="form-control input-md">
     
@@ -67,7 +67,7 @@ include "searchAllAnime.php";
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-info">Add anime</button>
+    <button id="submit" name="submit" class="btn btn-info">Add movie</button>
   </div>
 </div>
 
